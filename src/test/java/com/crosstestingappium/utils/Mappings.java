@@ -33,7 +33,7 @@ public class Mappings {
         try {
             StringBuilder fileName = new StringBuilder();
             fileName.append(System.getProperty("user.dir"));
-            fileName.append("/src/test/java/br/com/crosstestingappium/elements/");
+            fileName.append("/src/test/java/com/crosstestingappium/elements/");
             fileName.append(this.getPlatform());
             fileName.append("/");
             fileName.append(this.getScreen());

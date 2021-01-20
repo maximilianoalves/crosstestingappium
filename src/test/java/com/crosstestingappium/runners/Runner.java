@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         features = "src/test/java/com/crosstestingappium/features",
         glue = "com/crosstestingappium/steps",
-        tags = "@sum",
+        tags = "@operations",
         plugin = { "pretty", "html:target/cucumber-reports.html" },
         monochrome = true
 )

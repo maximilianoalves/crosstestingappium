@@ -1,0 +1,31 @@
+{
+  "textViewResult": {
+    "type": "ID",
+    "value": "com.example.leonardomenezes.simplecalculatorandroid:id/android_result_text"
+  },
+  "fieldFirstNumber": {
+    "type": "ID",
+    "value": "com.example.leonardomenezes.simplecalculatorandroid:id/android_field_first_number"
+  },
+  "fieldSecondNumber": {
+    "type": "ID",
+    "value": "com.example.leonardomenezes.simplecalculatorandroid:id/android_field_second_number"
+  },
+  "btnSum": {
+    "type": "ID",
+    "value": "com.example.leonardomenezes.simplecalculatorandroid:id/android_button_sum"
+  },
+  "btnSubtract": {
+    "type": "ID",
+    "value": "com.example.leonardomenezes.simplecalculatorandroid:id/android_button_sub"
+  },
+  "btnMultiply": {
+    "type": "ID",
+    "value": "com.example.leonardomenezes.simplecalculatorandroid:id/android_button_mult"
+  },
+  "btnDivide": {
+    "type": "ID",
+    "value": "com.example.leonardomenezes.simplecalculatorandroid:id/android_button_div"
+  }
+
+}

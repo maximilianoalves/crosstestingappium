@@ -40,8 +40,7 @@ public class Utils {
             case ANDROID:
                 caps.setCapability("deviceName", "Galaxy J5 Prime");
                 caps.setCapability("platformName", "Android");
-                caps.setCapability("platformVersion", "8.0.0");
-                caps.setCapability("appPackage", "com.hedo.troopersapp");
+                caps.setCapability("appPackage", "com.example.leonardomenezes.simplecalculatorandroid");
                 caps.setCapability("appActivity", ".MainActivity");
                 caps.setCapability("app",  System.getProperty("user.dir") + "/apps/android/app-android-calculator.apk");
         }
