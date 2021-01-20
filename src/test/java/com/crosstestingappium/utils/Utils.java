@@ -1,5 +1,6 @@
-package br.com.crosstestingappium.utils;
+package com.crosstestingappium.utils;
 
+import org.junit.Assert;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -7,9 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import static com.sun.tools.internal.ws.wsdl.parser.Util.fail;
 
 
 public class Utils {
@@ -25,7 +25,7 @@ public class Utils {
         if (env != null) {
             return env.toUpperCase();
         } else {
-            fail("Platform not defined. \n Example: -Dplatform:ANDROID");
+            Assert.fail("Platform not defined. \n Example: -Dplatform:ANDROID");
             return null;
         }
     }

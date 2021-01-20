@@ -1,8 +1,8 @@
-package br.com.crosstestingappium.steps;
+package com.crosstestingappium.steps;
 
-import br.com.crosstestingappium.utils.Utils;
-import org.junit.After;
-import org.junit.Before;
+import com.crosstestingappium.utils.Utils;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 
 import java.net.MalformedURLException;
 
