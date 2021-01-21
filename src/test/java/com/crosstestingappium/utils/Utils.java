@@ -36,13 +36,21 @@ public class Utils {
 
         switch (platform) {
             case IOS:
-                //TODO: implements init config for ios
+                caps.setCapability("automationName", "XCUITest");
+                caps.setCapability("deviceName", "Iphone 11 Pro Max");
+                caps.setCapability("platformName", "IOS");
+                caps.setCapability("platformVersion", "13.2");
+                caps.setCapability("autoAcceptAlerts", true);
+                caps.setCapability("udid", "14C10049-5022-41D1-B2ED-9B4F21C8932D");
+                caps.setCapability("app", System.getProperty("user.dir") + "/apps/ios/SimpleCalculator.app");
+                break;
             case ANDROID:
                 caps.setCapability("deviceName", "Galaxy J5 Prime");
                 caps.setCapability("platformName", "Android");
                 caps.setCapability("appPackage", "com.example.leonardomenezes.simplecalculatorandroid");
                 caps.setCapability("appActivity", ".MainActivity");
                 caps.setCapability("app",  System.getProperty("user.dir") + "/apps/android/app-android-calculator.apk");
+                break;
         }
 
         URL url = new URL("http://127.0.0.1:4723/wd/hub");

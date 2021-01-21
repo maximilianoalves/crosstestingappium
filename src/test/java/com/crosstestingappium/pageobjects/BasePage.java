@@ -17,6 +17,9 @@ public class BasePage extends Utils {
             case XPATH:
                 el = getDriver().findElementByXPath(locator);
                 break;
+            case ACCESS_ID:
+                el = getDriver().findElementByAccessibilityId(locator);
+                break;
             default:
                 Assert.fail("Element type not mapping");
                 break;

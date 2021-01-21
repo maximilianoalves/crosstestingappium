@@ -1,5 +1,5 @@
 package com.crosstestingappium.utils;
 
 public enum FindTypes {
-    ID,XPATH
+    ID,XPATH,ACCESS_ID
 }
