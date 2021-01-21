@@ -12,7 +12,7 @@ Estrutura criada para estudos onde o principal objetiva era criar uma arquitetur
 - Allure Report
 
 ## Execução
-Para executar criamos um argumento chamado **platform** para ele podemos passar **ANDROID** ou **IOS**
+Para executar criamos um argumento chamado **platform** para ele podemos passar **ANDROID** ou **IOS**:
 
-Para executar para Android: `mvn test -Dplatform=ANDROID`
+Para executar para Android: `mvn test -Dplatform=ANDROID`  
 Para executar para iOS: `mvn test -Dplatform=IOS`
