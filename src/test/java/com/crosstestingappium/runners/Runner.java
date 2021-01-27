@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/com/crosstestingappium/features",
         glue = "com/crosstestingappium/steps",
         tags = "@operations",
-        plugin = {"io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm", "pretty", "json:target/cucumber-report/report.json" },
+        plugin = {"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm", "pretty", "json:target/cucumber-report/report.json" },
         monochrome = true
 )
 public class Runner {

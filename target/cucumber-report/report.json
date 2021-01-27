@@ -1,0 +1,510 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-27T20:39:29.362Z",
+        "before": [
+          {
+            "result": {
+              "duration": 13205000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.setup()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": ": Operations for two values",
+        "description": "",
+        "id": "do-calculator;:-operations-for-two-values;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 409000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 796000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User see the Calculator",
+            "match": {
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_see_the_Calculator()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 646000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User put first value 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_first_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1074000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User put second value 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 22
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_second_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 627000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User select \"sum\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sum\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_select(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 551000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The result should be 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.the_sum_result_should_be(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@operations"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-27T20:39:46.891Z",
+        "before": [
+          {
+            "result": {
+              "duration": 10113000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.setup()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": ": Operations for two values",
+        "description": "",
+        "id": "do-calculator;:-operations-for-two-values;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 378000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1256000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User see the Calculator",
+            "match": {
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_see_the_Calculator()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 937000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User put first value 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_first_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1500000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User put second value 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 22
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_second_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 611000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User select \"subtract\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"subtract\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_select(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 540000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The result should be 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.the_sum_result_should_be(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@operations"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-27T20:40:02.244Z",
+        "before": [
+          {
+            "result": {
+              "duration": 10004000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.setup()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": ": Operations for two values",
+        "description": "",
+        "id": "do-calculator;:-operations-for-two-values;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 403000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 785000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User see the Calculator",
+            "match": {
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_see_the_Calculator()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 627000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User put first value 10",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_first_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1084000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User put second value 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 22
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_second_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 638000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User select \"multiply\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"multiply\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_select(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 550000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The result should be 20",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.the_sum_result_should_be(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@operations"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-27T20:40:16.346Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9912000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.setup()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": ": Operations for two values",
+        "description": "",
+        "id": "do-calculator;:-operations-for-two-values;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 374000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.crosstestingappium.steps.BaseStep.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 848000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User see the Calculator",
+            "match": {
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_see_the_Calculator()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 662000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User put first value 10",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_first_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1095000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User put second value 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 22
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_put_second_value(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 626000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User select \"divide\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"divide\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.user_select(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 539000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The result should be 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 21
+                }
+              ],
+              "location": "com.crosstestingappium.steps.CalculatorSteps.the_sum_result_should_be(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@operations"
+          }
+        ]
+      }
+    ],
+    "name": "Do calculator",
+    "description": "",
+    "id": "do-calculator",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/crosstestingappium/features/Calculator.feature",
+    "tags": [
+      {
+        "name": "@operations",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
