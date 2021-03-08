@@ -1,5 +1,6 @@
 package com.crosstestingappium.pageobjects;
 
+import com.crosstestingappium.elements.models.BaseElementsGeneric;
 import com.crosstestingappium.utils.FindTypes;
 import com.crosstestingappium.utils.Utils;
 import io.appium.java_client.MobileElement;
@@ -8,17 +9,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class BasePage extends Utils {
 
-    public MobileElement element(FindTypes type, String locator) {
+    public MobileElement element(BaseElementsGeneric elements) {
+        FindTypes typeMatch = FindTypes.valueOf(elements.getType());
         MobileElement el = null;
-        switch (type) {
+        switch (typeMatch) {
             case ID:
-                el = getDriver().findElementById(locator);
+                el = getDriver().findElementById(elements.getValue());
                 break;
             case XPATH:
-                el = getDriver().findElementByXPath(locator);
+                el = getDriver().findElementByXPath(elements.getValue());
                 break;
             case ACCESS_ID:
-                el = getDriver().findElementByAccessibilityId(locator);
+                el = getDriver().findElementByAccessibilityId(elements.getValue());
                 break;
             default:
                 Assert.fail("Element type not mapping");

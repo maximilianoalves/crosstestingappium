@@ -1,15 +1,15 @@
 package com.crosstestingappium.utils;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import org.junit.Assert;
+import com.crosstestingappium.elements.models.GenericElements;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
-public class Mappings {
+@Getter @Setter
+public class Mappings<T extends GenericElements> {
     private String platform;
     private String screen;
 
@@ -26,48 +26,27 @@ public class Mappings {
         return screen;
     }
 
-    public JSONObject getJsonFile() {
-        JSONParser parser = new JSONParser();
-        JSONObject jsonDataObject = null;
+    public GenericElements getJson() {
+        StringBuilder fileName = new StringBuilder();
+        fileName.append(System.getProperty("user.dir"));
+        fileName.append("/src/test/java/com/crosstestingappium/elements/");
+        fileName.append(this.getPlatform());
+        fileName.append("/");
+        fileName.append(this.getScreen());
+        fileName.append(".json");
 
-        try {
-            StringBuilder fileName = new StringBuilder();
-            fileName.append(System.getProperty("user.dir"));
-            fileName.append("/src/test/java/com/crosstestingappium/elements/");
-            fileName.append(this.getPlatform());
-            fileName.append("/");
-            fileName.append(this.getScreen());
-            fileName.append(".json");
+        GenericElements json = null;
 
-            Object jsonFileObject = parser.parse(new FileReader(fileName.toString()));
-            jsonDataObject = (JSONObject) jsonFileObject;
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+
+        try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName.toString()), "UTF-8"))) {
+            Gson gson = new Gson();
+            JsonElement element = gson.fromJson(bufferedReader, JsonElement.class);
+            element = element.getAsJsonObject();
+            json = gson.fromJson(element, GenericElements.class);
+        }catch(IOException e) {
             e.printStackTrace();
         }
-        return jsonDataObject;
-    }
 
-    public String getValue(String element) {
-        JSONObject screenNode = (JSONObject) getJsonFile().get(element);
-        if (screenNode != null) {
-            return screenNode.get("value").toString();
-        } else {
-            Assert.fail("ScreenNode não encontrado: " + element);
-            return null;
-        }
-    }
-
-    public String getType(String element) {
-        JSONObject screenNode = (JSONObject) getJsonFile().get(element);
-        if (screenNode != null) {
-            return screenNode.get("type").toString();
-        } else {
-            Assert.fail("ScreenNode não encontrado: " + element);
-            return null;
-        }
+        return json;
     }
 }

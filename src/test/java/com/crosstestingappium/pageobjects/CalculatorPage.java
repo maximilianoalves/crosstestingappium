@@ -1,20 +1,21 @@
 package com.crosstestingappium.pageobjects;
 
-import com.crosstestingappium.utils.FindTypes;
+import com.crosstestingappium.elements.models.ElementsModel;
+import com.crosstestingappium.elements.models.GenericElements;
 import com.crosstestingappium.utils.Mappings;
 import io.appium.java_client.MobileElement;
 
 public class CalculatorPage extends BasePage {
 
-    Mappings mappings = new Mappings("CalculatorPage");
+    GenericElements components = new Mappings<ElementsModel>("CalculatorPage").getJson();
 
-    MobileElement textViewResult = element(FindTypes.valueOf(mappings.getType("textViewResult")), mappings.getValue("textViewResult"));
-    MobileElement fieldFirstNumber = element(FindTypes.valueOf(mappings.getType("fieldFirstNumber")), mappings.getValue("fieldFirstNumber"));
-    MobileElement fieldSecondNumber = element(FindTypes.valueOf(mappings.getType("fieldSecondNumber")), mappings.getValue("fieldSecondNumber"));
-    MobileElement btnSum = element(FindTypes.valueOf(mappings.getType("btnSum")), mappings.getValue("btnSum"));
-    MobileElement btnSubtract = element(FindTypes.valueOf(mappings.getType("btnSubtract")), mappings.getValue("btnSubtract"));
-    MobileElement btnMultiply = element(FindTypes.valueOf(mappings.getType("btnMultiply")), mappings.getValue("btnMultiply"));
-    MobileElement btnDivide = element(FindTypes.valueOf(mappings.getType("btnDivide")), mappings.getValue("btnDivide"));
+    MobileElement textViewResult = element(components.getTextViewResult());
+    MobileElement fieldFirstNumber = element(components.getFieldFirstNumber());
+    MobileElement fieldSecondNumber = element(components.getFieldSecondNumber());
+    MobileElement btnSum = element(components.getBtnSum());
+    MobileElement btnSubtract = element(components.getBtnSubtract());
+    MobileElement btnMultiply = element(components.getBtnMultiply());
+    MobileElement btnDivide = element(components.getBtnDivide());
 
    public String getTextViewResult() {
        return getText(textViewResult);
