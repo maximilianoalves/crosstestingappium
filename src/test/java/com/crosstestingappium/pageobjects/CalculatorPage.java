@@ -7,15 +7,15 @@ import io.appium.java_client.MobileElement;
 
 public class CalculatorPage extends BasePage {
 
-    GenericElements components = new Mappings<ElementsModel>("CalculatorPage").getJson();
+    GenericElements map = new Mappings<ElementsModel>("CalculatorPage").getJson();
 
-    MobileElement textViewResult = element(components.getTextViewResult());
-    MobileElement fieldFirstNumber = element(components.getFieldFirstNumber());
-    MobileElement fieldSecondNumber = element(components.getFieldSecondNumber());
-    MobileElement btnSum = element(components.getBtnSum());
-    MobileElement btnSubtract = element(components.getBtnSubtract());
-    MobileElement btnMultiply = element(components.getBtnMultiply());
-    MobileElement btnDivide = element(components.getBtnDivide());
+    MobileElement textViewResult = element(map.getTextViewResult());
+    MobileElement fieldFirstNumber = element(map.getFieldFirstNumber());
+    MobileElement fieldSecondNumber = element(map.getFieldSecondNumber());
+    MobileElement btnSum = element(map.getBtnSum());
+    MobileElement btnSubtract = element(map.getBtnSubtract());
+    MobileElement btnMultiply = element(map.getBtnMultiply());
+    MobileElement btnDivide = element(map.getBtnDivide());
 
    public String getTextViewResult() {
        return getText(textViewResult);
