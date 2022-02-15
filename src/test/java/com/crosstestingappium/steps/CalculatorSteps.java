@@ -1,6 +1,6 @@
 package com.crosstestingappium.steps;
 
-import com.crosstestingappium.pageobjects.CalculatorPage;
+import com.crosstestingappium.pagefactory.pages.CalculatorPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,5 +26,5 @@ public class CalculatorSteps {
     public void user_select(String operator) {calculatorPage.clickOperator(operator); }
 
     @Then("The result should be {int}")
-    public void the_sum_result_should_be(Integer value) { Assert.assertEquals(calculatorPage.getTextViewResult(), value.toString()); }
+    public void the_sum_result_should_be(Integer value) { Assert.assertEquals(calculatorPage.viewResultText(), value.toString()); }
 }

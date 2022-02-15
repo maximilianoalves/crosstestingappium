@@ -1,7 +1,7 @@
 @operations
 Feature: Do calculator
 
-  Scenario Outline: : Operations for two values
+  Scenario Outline: Operations for two values
     Given User see the Calculator
     And User put first value <firstValue>
     And User put second value <secondValue>

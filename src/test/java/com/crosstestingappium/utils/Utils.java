@@ -1,5 +1,7 @@
 package com.crosstestingappium.utils;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import org.junit.Assert;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -25,9 +27,13 @@ public class Utils {
         if (env != null) {
             return env.toUpperCase();
         } else {
-            Assert.fail("Platform not defined. \n Example: -Dplatform:ANDROID");
-            return null;
+            //Assert.fail("Platform not defined. \n Example: -Dplatform:ANDROID");
+            return "ANDROID";
         }
+    }
+
+    public static URL getUrlAppium() throws MalformedURLException {
+        return new URL("http://127.0.0.1:4723/wd/hub");
     }
 
     public static void init() throws MalformedURLException {
@@ -43,6 +49,8 @@ public class Utils {
                 caps.setCapability("autoAcceptAlerts", true);
                 caps.setCapability("udid", "14C10049-5022-41D1-B2ED-9B4F21C8932D");
                 caps.setCapability("app", System.getProperty("user.dir") + "/apps/ios/SimpleCalculator.app");
+
+                driver = new IOSDriver<>(getUrlAppium(), caps);
                 break;
             case ANDROID:
                 caps.setCapability("deviceName", "Galaxy J5 Prime");
@@ -50,11 +58,10 @@ public class Utils {
                 caps.setCapability("appPackage", "com.example.leonardomenezes.simplecalculatorandroid");
                 caps.setCapability("appActivity", ".MainActivity");
                 caps.setCapability("app",  System.getProperty("user.dir") + "/apps/android/app-android-calculator.apk");
+
+                driver = new AndroidDriver<>(getUrlAppium(), caps);
                 break;
         }
-
-        URL url = new URL("http://127.0.0.1:4723/wd/hub");
-        driver = new AppiumDriver<MobileElement>(url, caps);
         wait = new WebDriverWait(driver, 6000);
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
